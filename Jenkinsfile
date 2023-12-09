@@ -1,27 +1,26 @@
-pipeline{
-  agent any{
-    stages{
-      stage('hello'){
-        steps{
-          echo 'hello world'
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the project...'
+                // Add your build commands here
+            }
         }
-      }
-      stage('build'){
-        steps{
-          echo 'building the project'
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Add your test commands here
+            }
         }
-      }
-      stage('test'){
-        steps{
-          echo 'Testing ...'
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                // Add your deployment commands here
+            }
         }
-      }
-      stage('deploy'){
-        steps{
-          echo 'Deploying the app..'
-        }
-      }
     }
-  }
 }
+
   
